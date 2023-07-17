@@ -16,7 +16,7 @@ def ritm(str):
     for word in str:
         sum_w = 0
         for i in word:
-            if i in'рыавопрваоварполимлавьрамо':
+            if i in'хорошо живет на свете винни-пух':
                 sum_w += 1
         list_1.append(sum_w)
     return len(list_1) == list_1.count(list_1[0]) 
