@@ -15,9 +15,9 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
-    a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
+def print_operation_table(operation, num_rows=6, num_columns=6):#задаем функцию,которая принимает 2 аргумента(строки и столбцы)
+    a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]#создала двумерный список с ренджем,проходим по каждому элементу
     for i in a:
         print(*[f"{x:<3}" for x in i])
 
-print_operation_table(lambda x, y: x * y)        
+print_operation_table(lambda x, y: x * y)#выводим таблицу умножения через функцию лямбда      
